@@ -1,0 +1,14 @@
+<odoo>
+    <!-- Define Report Action -->
+    <record id="action_report_jasper" model="ir.actions.report">
+        <field name="name">Custom Jasper Report</field>
+        <field name="model">custom.model</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">test.jasper_report_template</field> <!-- Ensure this matches your report template name -->
+        <field name="binding_model_id" ref="model_custom_model"/>
+        <field name="binding_type">report"/>
+    </record>
+
+    <!-- Add Menu Item -->
+    <menuitem id="menu_jasper_report" name="Jasper Report" parent="test.menu_root" action="action_report_jasper"/>
+</odoo>
